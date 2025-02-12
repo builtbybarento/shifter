@@ -7,7 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <!-- Cherry bomb font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +20,10 @@
 
   <header>
     <nav>
-      <div class="invisibleNavMenu"></div>
-      <div class="navH1">
+      <div class="navMenu invisibleNavMenu">
+
+      </div>
+      <div class="navH1 fade-in">
         <h1>s h i f t e r</h1>
       </div>
       <div class="navMenu">
@@ -33,9 +35,16 @@
   </header>
 
   <main>
-    <header class="window">
-
+    <header class = "calendar-header" >
+      <button class="arrow left">&#8592;</button>
+      <h1>February 2025</h1>
+      <button class="arrow right">&#8594;</button>
     </header>
+
+    <section class = "calendar-box window">
+
+    </section>
+
   </main>
 
   <script src="main.js"></script>
