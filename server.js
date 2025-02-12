@@ -2,12 +2,12 @@ const express = require("express");
 const app = express(); //Initialize Express
 const mongoose = require("mongoose");//doing nothing for now
 const logger = require("morgan");
-const connectDB = require(".config/database");
+// const connectDB = require(".config/database");
 const mainRoutes = require("./routes/main");
 
 require("dotenv").config({ path: "./config/.env" });
 
-connectDB();
+// connectDB();
 
 app.set("view engine", "ejs");
 
@@ -28,7 +28,7 @@ app.use(logger('dev'))
 
 //Skip Flash
 
-//Routes
+// Routes
 app.use('/', mainRoutes)
 
 
@@ -36,3 +36,4 @@ app.use('/', mainRoutes)
 app.listen(process.env.PORT, () => {
   console.log("Server is running on port " + process.env.PORT)
 })
+
